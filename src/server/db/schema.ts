@@ -19,7 +19,7 @@ import {
 export const createTable = pgTableCreator((name) => `motohub_${name}`);
 
 export const images = createTable(
-  "post",
+  "images",
   {
     id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
     name: varchar("name", { length: 256 }).notNull(),
