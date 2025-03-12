@@ -14,7 +14,7 @@ function Topnav() {
         <img src="https://5o49s9j5d8.ufs.sh/f/AYfuaRWx9vQljOUCg6DxhMk4zdpDq71vaywFfGsnCHmclKZU" alt="Home" className="h-10 w-10" />
       </a>
       <a>
-        <div>MOTOHUB</div>
+        <div>WELCOME TO MOTOHUB</div>
       </a>
       <a href="/about">About</a>
     </nav>
