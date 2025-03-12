@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 function Topnav() {
   return (
-    <nav className="flex w-full items-center justify-between border-b p-4 text-l bg-black font-semibold">
+    <nav className="flex w-full items-center justify-between p-4 text-l bg-black font-semibold">
   <a href="/">Home</a>
   <div>
     <img src="src/app/imgs/motohub.png"  className="h-10" /> 
