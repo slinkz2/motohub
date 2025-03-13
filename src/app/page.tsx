@@ -3,6 +3,8 @@ import Link from "next/link";
 import { db } from "~/server/db";
 export const dynamic = "force-dynamic";
 
+
+
 async function images(){
   const images = await db.query.images.findMany();
   return(
@@ -25,9 +27,8 @@ export default async function HomePage() {
     >
       <SignedOut>
       <div className="h-screen w-full flex justify-center items-center text-8xl font-bold">
-        MAG SIGN IN KAMUNA!
+       MAG SIGN IN KAMUNA !
       </div>
-
       </SignedOut>
       
     </main>
