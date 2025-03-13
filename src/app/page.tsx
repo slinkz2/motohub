@@ -1,8 +1,6 @@
 import { SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 import { db } from "~/server/db";
-import React from 'react';
-
 export const dynamic = "force-dynamic";
 
 async function images(){
@@ -19,7 +17,6 @@ async function images(){
       </div>
   );
 }
-
 export default async function HomePage() {
   return (
     <main 
@@ -27,7 +24,10 @@ export default async function HomePage() {
       style={{ backgroundImage: `url(https://5o49s9j5d8.ufs.sh/f/AYfuaRWx9vQlzaS5Q0PkPp3UmKquLrjoJASQ2RxHZd8ytXTi)` }}
     >
       <SignedOut>
-        <div className="h-full w-full text-2x1">Sig]n in</div>
+      <div className="h-screen w-full flex justify-center items-center text-8xl font-bold">
+        MAG SIGN IN KAMUNA!
+      </div>
+
       </SignedOut>
       
     </main>
