@@ -1,12 +1,17 @@
 import { SignedOut } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import { eq } from "drizzle-orm";
 import Link from "next/link";
 import { db } from "~/server/db";
 export const dynamic = "force-dynamic";
 
 
 
-async function images(){
-  const images = await db.query.images.findMany();
+async function Images(){
+  const user = await auth();
+  const images = await db.query.images.findMany({
+    orderBy: (model, {desc}) => desc(model.id),
+  });
   return(
     <div className="flex flex-wrap gap-4 p-8">   
         {images.map((image) => (
@@ -26,7 +31,7 @@ export default async function HomePage() {
       style={{ backgroundImage: `url(https://5o49s9j5d8.ufs.sh/f/AYfuaRWx9vQlzaS5Q0PkPp3UmKquLrjoJASQ2RxHZd8ytXTi)` }}
     >
       <SignedOut>
-      <div className="h-screen w-full flex justify-center items-center text-8xl font-bold">
+      <div className="h-screen w-full flex justify-center items-center text-3xl font-bold">
        MAG SIGN IN KAMUNA !
       </div>
       </SignedOut>
@@ -34,3 +39,5 @@ export default async function HomePage() {
     </main>
   );
 }
+
+
